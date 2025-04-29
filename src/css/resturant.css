@@ -1,0 +1,247 @@
+.restaurant-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 4rem;
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filters input {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 250px;
+    box-sizing: border-box;
+  }
+  
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .restaurant-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+  }
+  
+  .restaurant-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .restaurant-card h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+  }
+  
+  .star-rating {
+    color: #f5c518;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+  
+  .tags {
+    margin: 0.5rem 0;
+  }
+  
+  .tag {
+    background: #e5f7ed;
+    color: #2e7d32;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  .menu-link {
+    display: inline-block;
+    margin-top: 0.8rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .menu-link:hover {
+    text-decoration: underline;
+  }
+  
+  .pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .pagination button {
+    padding: 8px 12px;
+    border: none;
+    background: #eee;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .pagination button:hover {
+    background: #ddd;
+  }
+  
+  .pagination button.active {
+    background: #007bff;
+    color: white;
+  }
+  
+  .pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .contact-info {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #444;
+    flex: 0;
+  }
+  
+  .contact-info p {
+    margin: 2px 0;
+    word-wrap: break-word;
+  }
+  
+  /* Medium screens (tablets and small laptops) */
+  @media (max-width: 992px) {
+    .filters {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .filters input {
+      width: 90%;
+      max-width: 400px;
+    }
+  
+    .restaurant-card {
+      padding: 1.2rem;
+    }
+  
+    .restaurant-card h2 {
+      font-size: 1.3rem;
+    }
+  
+    .menu-link {
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Small screens (phones) */
+  @media (max-width: 600px) {
+    .restaurant-container {
+      padding: 1rem;
+    }
+  
+    .restaurant-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .filters {
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .filters input {
+      width: 100%;
+    }
+  
+    .restaurant-card {
+      padding: 1rem;
+    }
+  
+    .restaurant-card h2 {
+      font-size: 1.2rem;
+    }
+  
+    .tag {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+    }
+  
+    .pagination {
+      gap: 0.3rem;
+    }
+  
+    .pagination button {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+  
+    .contact-info {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 346px) {
+    .filters {
+      margin-top: 4rem;
+    }
+  
+    .restaurant-container {
+      padding: 0.5rem;
+    }
+  
+    .restaurant-card {
+      padding: 0.8rem;
+    }
+  
+    .filters input {
+      width: 90%;
+    }
+  
+    .pagination button {
+      font-size: 0.85rem;
+    }
+    .restaurant-grid{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  
+  /* Extra-large screens (desktops wider than 1440px) */
+  @media (min-width: 1440px) {
+    .restaurant-container {
+      max-width: 1400px;
+    }
+  
+    .restaurant-card {
+      padding: 2rem;
+    }
+  }
+  
+  /* Global fix to avoid horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+  

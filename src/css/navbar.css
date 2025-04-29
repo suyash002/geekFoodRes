@@ -1,0 +1,114 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 4rem;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #111827;
+    z-index: 1000;
+  }
+  
+  .logo-section a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links ul li {
+    cursor: pointer;
+  }
+  
+  /* ✅ Style the Link inside each li */
+  .nav-links ul li a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.1s ease;
+  }
+  
+  /* ✅ Active style for the first link (e.g., Home) */
+  .nav-links ul li:first-child a {
+    color: #3B82F6;
+  }
+  
+  /* ✅ Hover effect on the link, not just li */
+  .nav-links ul li a:hover {
+    color: #3B82F6;
+  }
+  
+  .cta-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .cta-button button {
+    background-color: #2563EB;
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+  }
+  
+  .cta-button button:hover {
+    background-color: #1c55d1;
+  }
+  
+  .fa-bars {
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.434);
+    border-radius: 7px;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  @media screen and (min-width: 770px) {
+    .fa-bars {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 770px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .navbar {
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 346px) {
+    .navbar {
+      height: auto;
+      padding: 1rem;
+      gap: 0.5rem;
+    }
+  }
+  

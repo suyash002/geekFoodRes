@@ -1,0 +1,91 @@
+
+.section2 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    padding: 4rem 2rem; 
+  }
+  
+  .section2 div:first-child {
+    position: absolute;
+    left: 2%;
+    top: 17%;
+    width: 50%;
+    height: 75%;
+    z-index: 1;
+  }
+  
+  .section2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .section2 div:last-child {
+    width: 55%;
+    height: 120%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 12rem;
+    padding-right: 4rem;
+  }
+  
+  .section2 h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  
+  .section2 p {
+    font-size: 1rem;
+    color: #374151;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section2 button {
+    padding: 0.75rem 3rem;
+    background-color: #3c25eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+  }
+  
+  .section2 button:hover {
+    background-color: #fff;
+    color: #3c25eb;
+    border: 1px solid #3c25eb;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .section2 {
+      position: static;
+      flex-direction: column;
+      height: auto;
+      padding: 2rem 1rem;
+      align-items: center;
+    }
+  
+    .section2 div:first-child {
+      position: static;
+      width: 100%;
+      height: 20rem;
+      margin-bottom: 2rem;
+    }
+  
+    .section2 div:last-child {
+      width: 100%;
+      height: auto;
+      padding: 4rem;
+      margin-top: -2rem;
+    }
+  }
+  
